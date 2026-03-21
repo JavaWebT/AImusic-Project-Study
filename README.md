@@ -16,7 +16,5 @@
 <img width="2702" height="1750" alt="image" src="https://github.com/user-attachments/assets/461828ee-fa8b-4288-acb5-c4b90a293099" />
 
 ## JAVA后端
-### P2 构建项目
-- ....
 ### P4 基础代码生成
-
+1. 通过idea 运行框中的SQL语句
