@@ -24,3 +24,13 @@
 4. 对于user_id，也要设置为随机生成，避免通过增量生成，导致该应用被恶意攻击
 ### P4 基础代码生成
 1. 通过idea 运行框中的SQL语句能够方便我们排查BUG
+2. 一般来说，我们主要写control，其余的根据需求写
+
+### P5 验证码
+- 作用：防止人机遍历账号密码
+-  逻辑：先写一个control类，具体来说：
+-  1. 调用验证码接口，生成验证码对象captcha_A（比如 带计算的图片或者是带数字的图片）
+   2. 将验证码转换为文本存入变量 Code，并调用缓存将 Code 转换为一个随机生成的 CodeKey 存起来到缓存中，并为这个 CodeKey 设置了一个过期时间，防止人机爆破
+   3. 将captcha 图片转换为base64码base64_captcha_A
+   4. 创建一个Vo对象captcha_Vo并将（base64_captcha_A，CodeKey)保存到captcha_Vo中，返回给用户
+   5. 因为 CodeKey 与 Code 是对应的，若用户传来一个数字，随后会根据用户的CodeKey来查找缓存中的Code，与其对照，实现功能
