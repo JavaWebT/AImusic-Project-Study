@@ -34,3 +34,9 @@
    3. 将captcha 图片转换为base64码base64_captcha_A
    4. 创建一个Vo对象captcha_Vo并将（base64_captcha_A，CodeKey)保存到captcha_Vo中，返回给用户
    5. 因为 CodeKey 与 Code 是对应的，若用户传来一个数字，随后会根据用户的CodeKey来查找缓存中的Code，与其对照，实现功能
+
+### P6注册
+- 密码等重要信息不要明文存入数据库，要经过编码，CSDN曾经就用明文存储，导致库被偷了
+- 重要的字段通过枚举enums变量来保存，在JAVA中定义类使用的statics 表示可以不需要通过创建相应的类对象就能够调用该方法
+- 
+
