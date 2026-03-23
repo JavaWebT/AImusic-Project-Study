@@ -16,6 +16,8 @@
 <img width="2702" height="1750" alt="image" src="https://github.com/user-attachments/assets/461828ee-fa8b-4288-acb5-c4b90a293099" />
 
 ## JAVA后端
+### P2构建项目
+-common，admin,web；其中admin,web是要运行的，common是另外两个包共同依赖的包
 ### P3代码运行
 - 设计用户信息表可以注意的几个点
 1. statue 字段，为1，用户能正常使用；为0，该用户被ban掉，是为了防止有些用户恶意攻击我们的应用，比如自己的网站被疯狂访问。
@@ -24,6 +26,8 @@
 4. 对于user_id，也要设置为随机生成，避免通过增量生成，导致该应用被恶意攻击
 5. 因为前后端分离，所以前端和后端都需要运行起来，
 6. UserInfoQuery文件中的字符串字段，比如nickName,其还有相对应的nickNameFuzzy（用于模糊查询）
+
+
 ### P4 基础代码生成
 1. 通过idea 运行框中的SQL语句能够方便我们排查BUG
 2. 一般来说，我们主要写control，其余的根据需求写
