@@ -68,3 +68,4 @@
 ### 音乐首页
 - springboot中实体层 构建代码遵循  po(字段)、query(数据库中查询方法)。
 - 整体的顺序按照 实体层（数据库）、mapper层（接口--即代码中mapper层 以及实现即resource中的XML文件）、service层、控制层来书写代码
+- 对于是否推荐这个变量 CommendType,可以将其设置为枚举变量，注意，枚举变量放在实体层，且定义的时候，是public enum
