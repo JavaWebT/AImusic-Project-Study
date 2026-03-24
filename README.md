@@ -65,7 +65,16 @@
   3. 其中设置 music_user_id ，因为一首歌被一个用户创建后，作者便是唯一的，故设定该字段
 - 音乐创作表
 - 1. 将其中的设置信息设置为 JSON字段，方便我们后面修改推荐配置，即高级模式一侧的曲风，情绪等等内容。灵活
-### 音乐首页
+
+### P9.音乐首页
 - springboot中实体层 构建代码遵循  po(字段)、query(数据库中查询方法)。
 - 整体的顺序按照 实体层（数据库）、mapper层（接口--即代码中mapper层 以及实现即resource中的XML文件）、service层、控制层来书写代码
 - 对于是否推荐这个变量 CommendType,可以将其设置为枚举变量，注意，枚举变量放在实体层，且定义的时候，是public enum
+- XML中的SQL语句语法与MYSQL语句相同，示例如下图
+- <img width="600" height="390" alt="image" src="https://github.com/user-attachments/assets/5f2b15a0-884a-4b90-ace6-fbce66b6514a" />
+- 排查问题 通过 看日志中的SQL语句大部分情况下能够解决问题
+
+
+
+
+
