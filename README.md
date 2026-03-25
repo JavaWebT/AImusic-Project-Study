@@ -74,6 +74,11 @@
 - <img width="600" height="390" alt="image" src="https://github.com/user-attachments/assets/5f2b15a0-884a-4b90-ace6-fbce66b6514a" />
 - 排查问题 通过 看日志中的SQL语句大部分情况下能够解决问题
 
+### 文件读取1
+- getResource 接口出现BUG，音乐文件和音乐封面文件无法正常显示原因：
+- 1. 数据库内容这两个字段更改后，未保存；
+  2. 这两个字段中，包含了转义字符 ‘\’,使得路径错误
+
 
 
 
