@@ -54,6 +54,8 @@
 - 登录使用的是数据库中存储的MD5编码后的密码
 - 登录时添加验证码校验，能够在一定程度上降低数据库的访问量
 - 注册完成后，用户再登录，方便用户将账户信息记忆的更清楚
+- <img width="1213" height="573" alt="image" src="https://github.com/user-attachments/assets/708f616b-915d-4f4f-aa7f-3a6b93fa67cd" />
+- 上述图片中后端的 封装的 checkCode响应对象 中是checkCodekey，前端中是checkCodeKey,没有对应上，故前端获取不到后端的checkCodekey，所以无法登录
 
 ### P8 .构建音乐相关表
 - 作业（每个歌曲上加上点赞符号下加上 点赞数）
@@ -95,6 +97,7 @@
 - 对于AOP的简单理解
 - 1. AOP将我们要在代码中实验的业务功能与系统事务（权限管理，事务处理等）分离,提高代码的可维护性，拓展性。
   2. AOP有五种，最常使用的有 before、after 以及 around,分别是在方法调用前、后、前和后触发切片事件。
+
 
 
 
