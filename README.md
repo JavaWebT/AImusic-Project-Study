@@ -102,6 +102,10 @@
 - <img width="1186" height="292" alt="image" src="https://github.com/user-attachments/assets/0257d25f-7ed5-467a-b594-963bc87e77b1" />
 - <img width="1235" height="89" alt="image" src="https://github.com/user-attachments/assets/1d8fea15-e1d3-4f8b-9d32-b43bc5d3f051" />
 - 1.上图表明了我自己的SQL语言薄弱以及对该项目业务的不熟悉，导致自己写的SQL出了三个错误，无法完成业务，在这方面需要改善！！！
+- 2.点赞服务可以考虑实现的三种方式：
+- （1）视频刚推出，访问流量大，将其放入缓存中，后续热度下降将其放入数据库中。
+- （2）关联查询，即关联音乐信息表m与音乐行为表ma来实现，具体来说，发出点赞请求，看ma中是否有该记录（即某人给某首歌点赞），无则新增记录，有则删除记录。随后再通过SQL对m和ma进行查询得到点赞信息。（该项目通过该方式实现）
+- （3）直接更新
 
 
 
