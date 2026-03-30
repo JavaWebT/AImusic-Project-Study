@@ -99,7 +99,10 @@
   2. AOP有五种，最常使用的有 before、after 以及 around,分别是在方法调用前、后、前和后触发切片事件。
 
 ### 点赞
-<img width="1186" height="292" alt="image" src="https://github.com/user-attachments/assets/0257d25f-7ed5-467a-b594-963bc87e77b1" />
+- <img width="1186" height="292" alt="image" src="https://github.com/user-attachments/assets/0257d25f-7ed5-467a-b594-963bc87e77b1" />
+- <img width="1235" height="89" alt="image" src="https://github.com/user-attachments/assets/1d8fea15-e1d3-4f8b-9d32-b43bc5d3f051" />
+- 1.上图表明了我自己的SQL语言薄弱以及对该项目业务的不熟悉，导致自己写的SQL出了三个错误，无法完成业务，在这方面需要改善！！！
+
 
 
 
