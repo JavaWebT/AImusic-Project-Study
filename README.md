@@ -97,7 +97,10 @@
 - 对于AOP的简单理解
 - 1. AOP将我们要在代码中实验的业务功能与系统事务（权限管理，事务处理等）分离,提高代码的可维护性，拓展性。
   2. AOP有五种，最常使用的有 before、after 以及 around,分别是在方法调用前、后、前和后触发切片事件。
-- 216
+
+### 点赞
+<img width="1186" height="292" alt="image" src="https://github.com/user-attachments/assets/0257d25f-7ed5-467a-b594-963bc87e77b1" />
+
 
 
 
