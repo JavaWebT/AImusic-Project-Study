@@ -150,6 +150,8 @@
 - <img width="781" height="583" alt="image" src="https://github.com/user-attachments/assets/4bae8b15-2c36-45f0-b230-fd7e5c5cb207" />
 - <img width="491" height="359" alt="image" src="https://github.com/user-attachments/assets/af862e94-28a7-48dc-a43f-763957e72968" />
 
+### P20 获取签名信息 &&P21 获取支付信息
+
 ### P22 
 - 通过向微信官方请求 证书来验签。
 
