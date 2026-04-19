@@ -185,6 +185,10 @@
 - 代码写的方式，是一种习惯，只要我们能够完成功能，在该基础上，提高代码的可读性，性能即可。不需要那么多疑问。
 ### P33 记录音乐信息，封装提示词
 - createMusic 法中通过反射机制在程序运行时获取 MusicSettingEnum MusicSettingDTO 类中的信息，减少了代码量，以及可扩展性。在高级模式下，若需要增添新的提示词，无需在业务代码层面来修改代码，仅需要在 MusicSettingEnum MusicSettingDTO 中添加新字段即可。
+### P34 AI创作音乐接口
+- 将 MusicCreateApi4TianpuyueImpl设定 @Component("tianpuyueApi")与ModelType4MusicEnum中模型apiCode的命名相同，后面就能通过 SpringContext 下的getBean(apiCode)来调用
+apiCode相应的API来实现功能。
+### P36 AI音乐生成结果处理
   
 
 
