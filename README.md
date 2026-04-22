@@ -183,19 +183,27 @@
 
 ### P32 组装参数
 - 创建对象的时候可以选择，调用构造函数直接设置对象值，但这种方法没有setter方法清晰，可能会出现传错的情况。
-- 代码写的方式，是一种习惯，只要我们能够完成功能，在该基础上，提高代码的可读性，性能即可。不需要那么多疑问。
+- 代码写的方式，是一种习惯，只要我们能够完成功能，在该基础上，提高代码的可读性，性能即可。
 
 ### P33 记录音乐信息，封装提示词
 - createMusic 法中通过反射机制在程序运行时获取 MusicSettingEnum MusicSettingDTO 类中的信息，减少了代码量，以及可扩展性。在高级模式下，若需要增添新的提示词，无需在业务代码层面来修改代码，仅需要在 MusicSettingEnum MusicSettingDTO 中添加新字段即可。
 
 ### P34 AI创作音乐接口
-- 将 MusicCreateApi4TianpuyueImpl设定 @Component("tianpuyueApi")与ModelType4MusicEnum中模型apiCode的命名相同，后面就能通过 SpringContext 下的getBean(apiCode)来调用
+- 将 MusicCreateApi4TianpuyueImpl设定 @Component("tianpuyueApi")与 ModelType4MusicEnum 中模型 apiCode 的命名相同，后面就能通过 SpringContext 下的getBean(apiCode)来调用
 apiCode相应的API来实现功能。
+- 拓展 若用户能上传自己的音频，AI根据该音频结合提示词生成音乐，应该更好
 
 ### P33 创作音乐02-记录音乐信息，封装提示词
-- 对于高级模式模式下，需要将前端用户选择的包含曲风、情绪、人声的 musicSettingsDTO 追加到 prompt 中，我们可以使用 for 循环对 musicSettingsDTO 中的内容逐个处理，但这样若后期需要增添新需求，比如添加一种设置--音调，这时候我们则需要将 DTO，枚举以及for循环修改。若我们使用反射来完成该功能，则不需要在具体的业务代码中修改，仅仅需要修改枚举以及DTO ，因为 MusicSettingEnum 与 MusicSettingsDTO 是对应的，故我们能够使用PropertyDescriptor pd = new PropertyDescriptor(settingEnum.getKeyCode(), MusicSettingDTO.class); 其中的 MusicSettingDTO.class 即是一种反射，反射是我们在程序运行过程中获取类的属性以及方法，这样可以简化代码，提升代码可维护性。
-  
+- 对于高级模式模式下，需要将前端用户选择的包含曲风、情绪、人声的 musicSettingsDTO 追加到 prompt 中，我们可以使用 《for 循环结合多个if判断》 对 musicSettingsDTO 中的内容逐个处理，但这样若后期需要增添新需求，比如添加一种设置--音调，这时候我们则需要将 DTO，枚举以及for循环中添加 if 判断。若我们使用反射来完成该功能，则不需要在具体的业务代码中修改，仅仅需要修改枚举以及DTO ，因为 MusicSettingEnum 与 MusicSettingsDTO 是对应的，故我们能够使用PropertyDescriptor pd = new PropertyDescriptor(settingEnum.getKeyCode(), MusicSettingDTO.class); 其中的 MusicSettingDTO.class 即是一种反射，反射是我们在程序运行过程中获取类的属性以及方法，这样可以简化代码，提升代码可维护性。
+- 注意：枚举类的写法，最前面的是枚举实例，这些实例是通过 英文逗号分割的 "," 
+### P36 AI音乐查询回调接口
 ### P36 AI音乐生成结果处理
+- 实际应用流程：生成音乐 -> 音乐回调 -> 向数据库写入音乐
+- 若没有50购买 天谱音的API key，那么就使用laoluo封装的接口，流程变为 生成音乐 -> 主动查询音乐状态 -> 向数据库写入音乐
+- 主动查询音乐状态，在本视频18min钟位置
+### P37 AI音乐生成结果处理优化
+### P38 AI音乐生成联调
+- 完成了loadMyMusic 与 loadCreatingMusic 两个controller接口
 
   
 
